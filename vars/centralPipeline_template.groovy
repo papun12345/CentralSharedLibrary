@@ -9,6 +9,11 @@ def call(){
                         deleteDir()
                     }
                 }
+                stage('LoadVariables'){
+                    steps{
+                        centralPipeline_template.getAllDetails()
+                    }
+                }
                 stage('Check-Out'){
                     steps{
                             checkOutFrom("${env.scmUrl}","${env.scmCredential}")
