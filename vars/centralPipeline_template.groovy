@@ -20,7 +20,7 @@ def call(){
                 }
                 stage('Run-Build-Inside-container'){
                     steps{
-                            dockerScript("${env.dockerImage}","${env.mavenCommand}")
+                            dockerScript()
                     }
                 }
                 stage('Sonar-Scanning'){
