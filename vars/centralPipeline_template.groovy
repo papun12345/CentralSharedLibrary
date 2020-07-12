@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
-def scmUrl = null
-def scmCredential = null
-getAllDetails()
 def call(){
+        def scmUrl = null
+        def scmCredential = null
+        getAllDetails()
         pipeline {
             agent any
             stages {
