@@ -1,2 +1,2 @@
 @Library('myCentralSharedLibrary')_
-centralPipeline_template
+centralPipeline_template 'DSL_Pipeline'
