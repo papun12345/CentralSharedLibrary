@@ -1,5 +1,5 @@
 @Library('myCentralSharedLibrary')_
-centralPipeline.createPipeline{
+centralPipeline.createmyPipeline{
 jobName="Central-pipeline-Test"
 repoUrl="Someurl"
 }
