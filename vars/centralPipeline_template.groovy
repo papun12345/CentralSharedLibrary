@@ -1,4 +1,4 @@
-pipelineJob('DSL_Pipeline')  {
+pipelineJob('${job_name}')  {
         definition {
         cps {
             script('''echo "Hello ${repoUrl}"''')
