@@ -44,7 +44,7 @@ def getAllDetails(){
                           env.scmCredential = props['scmCredential']
                           env.dockerImage=props['dockerImage']
                           env.mavenCommand=props['mavenCommand']
-                          echo "This is invoking with $dockerImage $mavenCommand"
+                          echo "This is invoking with ${dockerImage} ${mavenCommand}"
                     }
            }
 }
