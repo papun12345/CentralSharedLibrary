@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 def CreatePipeline(){
         pipeline {
             agent any
