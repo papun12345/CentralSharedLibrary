@@ -33,7 +33,7 @@ def call(){
                 }
             }
         }
-    }
+}
 def getAllDetails(){
         configFileProvider([configFile(fileId: 'e8a0ea8b-f97a-4bd5-8f49-285c554d733f', variable: 'myCustom')]) {
                     script{
