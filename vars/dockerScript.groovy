@@ -6,7 +6,7 @@ def call() {
   //def mavenCommand=command
  // docker.image(dockerImage).inside(){
 //	sh mavenCommand
-}
+//}
 }
 //"subhasanket/java-maven-node-env"
 //"mvn clean package"
