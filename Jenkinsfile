@@ -1,2 +1,5 @@
 @Library('myCentralSharedLibrary')_
-centralPipeline("Central-pipeline-Test","Someurl")
+centralPipeline{
+  "Central-pipeline-Test",
+    "Someurl"
+}
