@@ -1,5 +1,4 @@
-def call(jobName, repoUrl) {
-    pipelineJob(jobName) {
+pipelineJob(jobName) {
         definition {
         cps {
             script('''echo "Hello ${repoUrl}"''')
@@ -7,4 +6,3 @@ def call(jobName, repoUrl) {
         }
     }
     }
-}
