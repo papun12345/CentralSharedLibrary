@@ -1,11 +1,8 @@
-#!/usr/bin/groovy
-def call(jobName,repoUrl){
-jobDsl(jobName) {
+pipelineJob('DSL_Pipeline')  {
         definition {
         cps {
             script('''echo "Hello ${repoUrl}"''')
             sandbox()
         }
-    }
     }
 }
