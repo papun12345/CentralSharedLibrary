@@ -16,7 +16,7 @@ def call(){
                 }
                 stage('Check-Out'){
                     steps{
-                            checkOutFrom("${env.scmUrl}","${env.scmCredential}")
+                            checkOutFrom(${env.scmUrl},${env.scmCredential})
                     }
                 }
                 stage('Run-Build-Inside-container'){
