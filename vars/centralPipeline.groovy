@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def createmyPipeline(jobName,repoUrl){
+def call(jobName,repoUrl){
 pipelineJob(jobName) {
         definition {
         cps {
