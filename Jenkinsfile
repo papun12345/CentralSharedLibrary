@@ -1,5 +1,2 @@
 @Library('myCentralSharedLibrary')_
-centralPipeline{
- jobName="Central-pipeline-Test"
-    jobUrl="Someurl"
-}
+centralPipeline("Central-pipeline-Test","Someurl")
