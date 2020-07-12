@@ -1,4 +1,7 @@
 #!/usr/bin/env groovy
+def scmUrl = null
+def scmCredential = null
+getAllDetails()
 def call(){
         pipeline {
             agent any
@@ -10,7 +13,7 @@ def call(){
                 }
                 stage('Check-Out'){
                     steps{
-                         checkOutFrom('http://nitin@ec2-18-224-68-30.us-east-2.compute.amazonaws.com:7990/scm/sub/maven-project-sample.git','wipro-bitbucket')
+                         checkOutFrom(scmUrl,scmCredential)
                     }
                 }
                 stage('Run-Build-Inside-container'){
@@ -31,3 +34,12 @@ def call(){
             }
         }
     }
+def getAllDetails(){
+        configFileProvider([configFile(fileId: 'e8a0ea8b-f97a-4bd5-8f49-285c554d733f', variable: 'myCustom')]) {
+                    script{
+                          def props = readProperties file: "$myCustom"
+                          scmUrl = props['scmUrl']
+                          scmCredential = props['scmCredential']  
+                    }
+           }
+}
