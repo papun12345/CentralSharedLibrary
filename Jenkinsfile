@@ -1,2 +1,2 @@
 @Library('myCentralSharedLibrary')_
-centralPipeline_template.CreatePipeline()
+centralPipeline_template.CreatePipelineTemplate()
