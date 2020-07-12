@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def CreatePipelineTemplate(){
+def call(){
         pipeline {
             agent any
             stages {
