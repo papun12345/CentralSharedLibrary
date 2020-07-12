@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
-scmUrl = null
-scmCredential = null
+def scmUrl = null
+def scmCredential = null
 getAllDetails()
 def call(){
         pipeline {
