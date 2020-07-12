@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
-def call(dockerImage,mavenCommand) {
+def call(docker,command) {
   echo "************************************Run Build Inside Container**************************************"
-  def dockerImage=dockerImage
-  def mavenCommand=mavenCommand
+  def dockerImage=docker
+  def mavenCommand=command
   docker.image(dockerImage).inside(){
 	sh mavenCommand
 }
