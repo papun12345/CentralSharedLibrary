@@ -1,8 +1,12 @@
 #!/usr/bin/env groovy
 
-def call() {
+def call(dockerImage,mavenCommand) {
   echo "************************************Run Build Inside Container**************************************"
-  docker.image("subhasanket/java-maven-node-env").inside(){
-	sh "mvn clean package"
+  def dockerImage=dockerImage
+  def mavenCommand=mavenCommand
+  docker.image(dockerImage).inside(){
+	sh mavenCommand
 }
 }
+//"subhasanket/java-maven-node-env"
+//"mvn clean package"
