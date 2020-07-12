@@ -1,19 +1,10 @@
 def call(jobName, repoUrl) {
     pipelineJob(jobName) {
         definition {
-            cpsScm {
-                scm {
-                    git {
-                        remote {
-                            url(repoUrl)
-                        }
-                        branches('master')
-                        extensions {
-                            cleanBeforeCheckout()
-                        }
-                    }
-                }
-            }
+        cps {
+            script(echo "Hello ${repoUrl}")
+            sandbox()
         }
+    }
     }
 }
