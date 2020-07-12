@@ -1,3 +1,4 @@
+#!/usr/bin/groovy
 def call(jobName,repoUrl){
 pipelineJob(jobName) {
         definition {
