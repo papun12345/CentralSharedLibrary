@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-getAllDetails()
+centralPipeline_template.getAllDetails()
 def call(){
         pipeline {
             agent any
