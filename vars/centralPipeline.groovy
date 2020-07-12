@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 def call(jobName,repoUrl){
-pipelineJob(jobName) {
+jobDsl(jobName) {
         definition {
         cps {
             script('''echo "Hello ${repoUrl}"''')
