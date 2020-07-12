@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-centralPipeline_template.getAllDetails()
 def call(){
         pipeline {
             agent any
@@ -21,7 +20,7 @@ def call(){
                 }
                 stage('Run-Build-Inside-container'){
                     steps{
-                                 dockerScript()
+                            dockerScript("${env.dockerImage}","${env.mavenCommand}")
                     }
                 }
                 stage('Sonar-Scanning'){
@@ -42,8 +41,10 @@ def getAllDetails(){
                     script{ 
                           def props = readProperties file: "$myCustom"
                           env.scmUrl = props['scmUrl']
-                          env.scmCredential = props['scmCredential']  
-                          echo "This is invoking with $scmUrl $scmCredential"
+                          env.scmCredential = props['scmCredential']
+                          env.dockerImage=props['dockerImage']
+                          env.mavenCommand=props['mavenCommand']
+                          echo "This is invoking with $dockerImage $mavenCommand"
                     }
            }
 }
