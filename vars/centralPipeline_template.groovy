@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def scmUrl = null
 def scmCredential = null
-getAllDetails()
+centralPipeline_template.getAllDetails()
 def call(){
         pipeline {
             agent any
