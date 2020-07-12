@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 def createmyPipeline(jobName,repoUrl){
 pipelineJob(jobName) {
         definition {
