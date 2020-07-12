@@ -1,8 +1,6 @@
 #!/usr/bin/env groovy
-def scmUrl = null
-def scmCredential = null
-centralPipeline_template.getAllDetails()
 def call(){
+        getAllDetails()
         pipeline {
             agent any
             stages {
@@ -36,11 +34,10 @@ def call(){
 }
 def getAllDetails(){
         configFileProvider([configFile(fileId: 'e8a0ea8b-f97a-4bd5-8f49-285c554d733f', variable: 'myCustom')]) {
-                    script{
-                          
+                    script{ 
                           def props = readProperties file: "$myCustom"
-                          scmUrl = props['scmUrl']
-                          scmCredential = props['scmCredential']  
+                          env.scmUrl = props['scmUrl']
+                          env.scmCredential = props['scmCredential']  
                           echo "This is invoking with $scmUrl $scmCredential"
                     }
            }
