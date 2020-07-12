@@ -1,4 +1,7 @@
 #!/usr/bin/env groovy
+scmUrl = null
+scmCredential = null
+getAllDetails()
 def call(){
         pipeline {
             agent any
