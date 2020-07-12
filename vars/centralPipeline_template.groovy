@@ -11,7 +11,7 @@ def call(){
                 }
                 stage('LoadVariables'){
                     steps{
-                        centralPipeline_template.getAllDetails()
+                        getAllDetails()
                     }
                 }
                 stage('Check-Out'){
