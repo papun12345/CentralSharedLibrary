@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
+getAllDetails()
 def call(){
-        getAllDetails()
         pipeline {
             agent any
             stages {
