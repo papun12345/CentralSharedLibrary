@@ -1,4 +1,4 @@
-def createPipeline(jobName,repoUrl){
+def createmyPipeline(jobName,repoUrl){
 pipelineJob(jobName) {
         definition {
         cps {
