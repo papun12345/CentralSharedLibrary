@@ -4,10 +4,10 @@ def call() {
   def SCANNER_HOME = tool 'Sonar_Jenkins'
   //def SONAR_CREDENTIAL = credentials 'SonarCloud'
   withSonarQubeEnv(credentialsId: 'SonarCloud', installationName: 'SonarCloud') {
-    sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.organization=env.sonarOrganisation \
-                -Dsonar.organization=env.sonarOrganisation \
-                -Dsonar.projectKey=env.sonarProjectKey \
-                -Dsonar.projectName=env.sonarProjectName \
+    sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.organization=${env.sonarOrganisation} \
+                -Dsonar.organization=${env.sonarOrganisation} \
+                -Dsonar.projectKey=${env.sonarProjectKey} \
+                -Dsonar.projectName=${env.sonarProjectName} \
                 -Dsonar.projectVersion=1.0 \
                 -Dsonar.sources=. \
                 -Dsonar.language=java \
