@@ -5,9 +5,9 @@ def call() {
   //def SONAR_CREDENTIAL = credentials 'SonarCloud'
   withSonarQubeEnv(credentialsId: 'SonarCloud', installationName: 'SonarCloud') {
     sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.organization=env.sonarOrganisation \
-                -Dsonar.organization=subhasanket-sonar \
-                -Dsonar.projectKey=subha-maven-codecovrage \
-                -Dsonar.projectName=subha-maven-codecovrage \
+                -Dsonar.organization=env.sonarOrganisation \
+                -Dsonar.projectKey=env.sonarProjectKey \
+                -Dsonar.projectName=env.sonarProjectName \
                 -Dsonar.projectVersion=1.0 \
                 -Dsonar.sources=. \
                 -Dsonar.language=java \
