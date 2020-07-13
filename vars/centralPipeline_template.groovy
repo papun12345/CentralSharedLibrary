@@ -44,7 +44,7 @@ def getAllDetails(){
                           env.scmCredential = props['scmCredential']
                           env.dockerImage=props['dockerImage']
                           env.mavenCommand=props['mavenCommand']
-                          env.sonarOrganisation=props['sonarOrganisation']
+                          env.sonarOrganization=props['sonarOrganization']
                           env.sonarProjectKey=props['sonarProjectKey']
                           env.sonarProjectName=props['sonarProjectName']
                          // echo "This is invoking with ${dockerImage} ${mavenCommand}"
